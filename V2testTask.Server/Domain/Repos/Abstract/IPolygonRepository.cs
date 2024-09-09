@@ -7,5 +7,7 @@ namespace V2testTask.Server.Domain.Repos.Abstract
         Polygon GetPolygonById(int id);
         List<Polygon> GetPolygons();
         void PostPolygon(Polygon polygon);
-    }
+		void DeletePolygon(int id);
+
+	}
 }

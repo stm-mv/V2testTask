@@ -19,5 +19,10 @@ namespace V2testTask.Server.Models
         public List<Point> Points { get; set; }
     }
 
+    public class PolygonWithPoint
+    {
+		public Polygon polygon { get; set; }
+		public Point point { get; set; }
+    }
 
 }
