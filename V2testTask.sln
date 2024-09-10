@@ -3,9 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V2testTask.Server", "V2testTask.Server\V2testTask.Server.csproj", "{7828298F-51CF-4C38-89CC-1ADDF9BDA9AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "V2testTask.Server", "V2testTask.Server\V2testTask.Server.csproj", "{7828298F-51CF-4C38-89CC-1ADDF9BDA9AE}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "v2testtask.client", "v2testtask.client\v2testtask.client.esproj", "{FF2357BE-7185-4E4F-8892-FA3EE17E533E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7828298F-51CF-4C38-89CC-1ADDF9BDA9AE} = {7828298F-51CF-4C38-89CC-1ADDF9BDA9AE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

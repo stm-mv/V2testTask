@@ -8,6 +8,11 @@
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\v2testtask.client\browser\</BuildOutputFolder>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="src\app\services\" />
+    <None Remove="nginx.conf" />
+    <None Remove="package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptConfiguration Include="nginx.conf" />
+    <TypeScriptConfiguration Include="package.json" />
   </ItemGroup>
 </Project>

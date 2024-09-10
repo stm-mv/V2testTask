@@ -9,7 +9,7 @@ import { PolygonCheckComponent } from './polygon-check/polygon-check.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PolygonCheckComponent
+    PolygonCheckComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,19 +1,26 @@
 <h1>Task</h1>
 <div style="display: flex; justify-content: space-evenly;">
   <div>
-    <canvas #myCanvas width="500" height="500" style="border: 3px solid #d3d3d3"></canvas>
+    <button (click)="savePolygon()" type="button" class="btn btn-primary">Сохранить полигон</button>
+    <select (change)="onPolygonSelect($event)" class="form-select" aria-label="Default select example">
+      <option value="" selected>Выберите полигон</option>
+      <option *ngFor="let polygon of polygons" [value]="polygon.id">{{polygon.name}}</option>
+    </select>
   </div>
   <div>
-    <button (click)="clearCanvas()" type="button" class="btn btn-primary">
-      Очистить
-    </button>
     <button (click)="startDrawingPolygon()" type="button" class="btn btn-primary">
       Нарисовать полигон
     </button>
     <button (click)="startDrawingPoint()" type="button" class="btn btn-primary">
       Нарисовать точку
     </button>
-
+    <button (click)="clearCanvas()" type="button" class="btn btn-primary">
+      Очистить
+    </button>
+  </div>
+  <div>
+    <canvas #myCanvas width="500" height="500" style="border: 3px solid #d3d3d3"></canvas>
+    <button>qqq</button>
   </div>
 </div>
 

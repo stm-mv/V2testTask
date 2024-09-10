@@ -11,7 +11,8 @@ namespace V2testTask.Server.Domain
         public DbSet<Point> Points { get; set; } = null!;
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
-        {           
+        {
+            Database.Migrate();
         }
     }
 }

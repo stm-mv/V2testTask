@@ -1,0 +1,36 @@
+services:
+  backend:
+    image: ${DOCKER_REGISTRY-}backend
+    build:
+      context: .
+      dockerfile: V2testTask.Server/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    ports:
+      - '51234:80'
+      - '5001:8080'
+
+  frontend:
+    image: ${DOCKER_REGISTRY-}frontend
+    build: 
+      context: .
+      dockerfile: v2testtask.client/Dockerfile
+    environment:
+      - NODE_ENV=Production
+    ports:
+      - "5000:80"
+
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Qwerty12
+      - POSTGRES_DB=postgres #optional (specify default database instead of $POSTGRES_DB)
+    ports:
+      - "5002:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  postgres_data:
