@@ -1,10 +1,6 @@
 import { Component, AfterViewInit, ElementRef, Renderer2, ViewChild, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
-import * as svgjs from 'svgjs';
-import * as d3 from 'd3-array';
-import * as d3Shape from 'd3-shape';
-import * as d3Selection from 'd3-selection';
 import { Point, Polygon } from './Interfaces/Polygons';
 
 

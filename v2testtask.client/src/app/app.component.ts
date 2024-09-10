@@ -16,3 +16,8 @@ interface WeatherForecast {
 export class AppComponent{
   title = 'v2testtask.client';
 }
+
+export const CONFIG =
+{
+  API_URL: 'api/'
+}

@@ -5,10 +5,6 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PolygonCheckComponent } from './polygon-check/polygon-check.component';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatCardModule } from '@angular/material/card';
-import * as svgjs from '@svgdotjs/svg.js';
-
 
 @NgModule({
   declarations: [
@@ -19,8 +15,6 @@ import * as svgjs from '@svgdotjs/svg.js';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    MatFormFieldModule,
-    MatCardModule,
     ReactiveFormsModule,
   ],
   providers: [],
